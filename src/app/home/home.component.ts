@@ -4,7 +4,7 @@ import { PollingService } from '../utils/polling.service';
 @Component({
   selector: 'app-home',
   template: `
-    <p>Polling count times (lazy): {{ polling.polling$ | async }}</p>
+    <p>Polling count times (home): {{ polling.polling$ | async }}</p>
   `
 })
 export class HomeComponent implements OnInit {
