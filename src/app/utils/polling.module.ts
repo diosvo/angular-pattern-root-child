@@ -1,10 +1,16 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { PollingComponent } from './polling/polling.component';
 import { PollingService } from './polling.service';
 
 @NgModule({
-  imports: [],
   declarations: [PollingComponent],
-  providers: [PollingService]
+  exports: [PollingComponent]
 })
-export class PollingModule {}
+export class PollingModule {
+  static forRoot(): ModuleWithProviders<PollingModule> {
+    return {
+      ngModule: PollingModule,
+      providers: [PollingService]
+    };
+  }
+}

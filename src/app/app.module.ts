@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
+import { PollingModule } from './utils/polling.module';
 
 const routes: Routes = [
   {
@@ -17,7 +18,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [HomeModule, BrowserModule, RouterModule.forRoot(routes)],
+  imports: [
+    HomeModule,
+    BrowserModule,
+    PollingModule.forRoot(),
+    RouterModule.forRoot(routes)
+  ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
