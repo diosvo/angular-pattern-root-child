@@ -2,14 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-polling',
-  templateUrl: './polling.component.html',
-  styleUrls: ['./polling.component.css']
+  template: `
+    Hi Nhung ne
+  `
 })
 export class PollingComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

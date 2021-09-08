@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PollingService } from '../utils/polling.service';
 
 @Component({
   selector: 'app-lazy',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lazy.component.css']
 })
 export class LazyComponent implements OnInit {
-  constructor() {}
+  constructor(public polling: PollingService) {}
 
   ngOnInit() {}
 }
