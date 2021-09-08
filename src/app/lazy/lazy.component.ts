@@ -3,8 +3,9 @@ import { PollingService } from '../utils/polling.service';
 
 @Component({
   selector: 'app-lazy',
-  templateUrl: './lazy.component.html',
-  styleUrls: ['./lazy.component.css']
+  template: `
+    <p>Polling count times (lazy): {{ polling.polling$ | async }}</p>
+  `
 })
 export class LazyComponent implements OnInit {
   constructor(public polling: PollingService) {}

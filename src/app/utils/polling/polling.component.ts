@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-polling',
   template: `
-    Hi Nhung ne
+    Hi Dios ne
   `
 })
 export class PollingComponent implements OnInit {

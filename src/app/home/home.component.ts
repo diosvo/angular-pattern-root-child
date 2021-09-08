@@ -3,14 +3,12 @@ import { PollingService } from '../utils/polling.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  template: `
+    <p>Polling count times (lazy): {{ polling.polling$ | async }}</p>
+  `
 })
 export class HomeComponent implements OnInit {
-
   constructor(public polling: PollingService) {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
