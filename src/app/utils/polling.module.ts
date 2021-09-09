@@ -7,6 +7,7 @@ import { PollingService } from './polling.service';
   exports: [PollingComponent]
 })
 export class PollingModule {
+  // It's the same when we use providedIn: root
   static forRoot(): ModuleWithProviders<PollingModule> {
     return {
       ngModule: PollingModule,
