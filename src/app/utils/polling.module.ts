@@ -39,7 +39,7 @@ export class PollingModule {
         PollingService,
         {
           provide: INTERVAL,
-          useValue: config.interval || 1000
+          useValue: config?.interval || 1000
         }
       ]
     };
