@@ -7,7 +7,7 @@ import { PollingModule } from '../utils/polling.module';
 @NgModule({
   imports: [
     CommonModule,
-    PollingModule.forChild({
+    PollingModule.withConfig({
       interval: 3000
     }),
     RouterModule.forChild([

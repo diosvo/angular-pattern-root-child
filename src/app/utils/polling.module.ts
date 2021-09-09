@@ -28,4 +28,20 @@ export class PollingModule {
       ]
     };
   }
+
+  // mix match
+  static withConfig(
+    config?: PollingConfig
+  ): ModuleWithProviders<PollingModule> {
+    return {
+      ngModule: PollingModule,
+      providers: [
+        PollingService,
+        {
+          provide: INTERVAL,
+          useValue: config.interval || 1000
+        }
+      ]
+    };
+  }
 }

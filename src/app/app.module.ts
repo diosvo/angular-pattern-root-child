@@ -21,7 +21,7 @@ const routes: Routes = [
   imports: [
     HomeModule,
     BrowserModule,
-    PollingModule.forRoot(),
+    PollingModule.withConfig(),
     RouterModule.forRoot(routes)
   ],
   declarations: [AppComponent],
