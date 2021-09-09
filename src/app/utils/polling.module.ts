@@ -1,6 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { PollingComponent } from './polling/polling.component';
-import { PollingService } from './polling.service';
+import { INTERVAL, PollingConfig, PollingService } from './polling.service';
 
 @NgModule({
   declarations: [PollingComponent],
@@ -15,6 +15,7 @@ export class PollingModule {
     };
   }
 
+  // After 3s, lazy module has been loaded
   static forChild(config: PollingConfig): ModuleWithProviders<PollingModule> {
     return {
       ngModule: PollingModule,
