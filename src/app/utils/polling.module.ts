@@ -13,4 +13,17 @@ export class PollingModule {
       providers: [PollingService]
     };
   }
+
+  static forChild(config: PollingConfig): ModuleWithProviders<PollingModule> {
+    return {
+      ngModule: PollingModule,
+      providers: [
+        PollingService,
+        {
+          provide: INTERVAL,
+          useValue: config.interval || 2000
+        }
+      ]
+    };
+  }
 }
