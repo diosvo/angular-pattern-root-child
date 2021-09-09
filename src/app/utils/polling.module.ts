@@ -15,7 +15,7 @@ export class PollingModule {
     };
   }
 
-  // After 3s, lazy module has been loaded
+  // After 3s, lazy module has been loaded (it's too lazy to increase count++)
   static forChild(config: PollingConfig): ModuleWithProviders<PollingModule> {
     return {
       ngModule: PollingModule,
@@ -29,7 +29,7 @@ export class PollingModule {
     };
   }
 
-  // mix match
+  // mix match: forRoot() & forChild() -> can remove 2 functions above
   static withConfig(
     config?: PollingConfig
   ): ModuleWithProviders<PollingModule> {
